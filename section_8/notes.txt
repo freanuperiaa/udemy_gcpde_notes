@@ -1,0 +1,23 @@
+Data Transfer Service
+
+
+on prem -> GCS Bucket
+GCS Bucket -> GCS Bucket
+other public cloud -> GCS Bucket
+
+
+
+On-premises to GCS
+- gsutil/gcloud storage (command line utility)
+    - online mode of transfer
+    - can run via bash command or python script
+
+Transfer Service for on-premises data
+    -  install an agent, create a transfer job
+
+Transfer Appliance
+    - physical device, transfer data with the help of google
+        - parang sa AWS
+    - good for data that exceeds 20TB or would take more than a week to upload
+
+

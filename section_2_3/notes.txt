@@ -1,0 +1,30 @@
+Section 2
+
+- Data Engineering
+
+Ingestion -> Storage -> Process -> Explore/Visualize
+
+^each step in this, there's an appropriate GCP Service
+
+
+- Structured, Semi-Structured, Unstructured
+
+
+- Batch Processing vs Stream Processing
+
+
+Section 3
+
+
+GCP Region & Zone
+
+Zones - Independent Data Center (Zone-a, Zone-b)
+Region - Geographical Area (us-central1)
+^together, they are us-central1-a, us-central1-b, etc
+
+Multi-region - Collection of geographical
+Global - Anywhere
+
+
+
+ 

@@ -1,0 +1,84 @@
+Session 4
+
+
+IAM - Identity and Access Management
+
+- Who can do What on Which Resources
+
+Who - Identity
+What - Action: Create, Update, Delete
+Which - Resources, compute engine, app engine, gcs
+
+Roles - Collections of Permissions
+
+
+Roles:
+    Primitive
+        - Owner
+        - Editor
+        - Viewer
+    
+    Pre-defined
+        - Compute Admin
+        - Storage Viewer
+    
+    Custom
+        - Combined Collection of Permission/s
+
+
+
+Service Account
+    - for nonhuman - apps, services (composer)
+    - is an identity for compute engine
+
+
+
+
+-------------------------------
+Virtual Machine / Compute Engine (IAAS)
+    - basic building block of any cloud
+    - for GCP, it is the service: Compute Engine
+
+parameters:
+zone: us-central1-a
+service account: zalzalakoh-iam-demo@gcp-pde-473205.iam.gserviceaccount.com
+machine family: c2d-standard-4
+boot disk: 
+storage:
+virtual private cloud: subnet
+
+
+
+-------------------------------
+Google App Engine (PAAS)
+managed service, deploy app at high scale
+serverless
+
+like Heroku!
+
+features:
+- auto scaling
+- load balancing
+- versioning
+- traffic splitting
+
+
+
+-------------------------------
+Google Kubernetes Engine (PAAS)
+
+- 100s of containers for scaling your app - you need some automated approach to manage all container lifecycle
+
+- kubernetes is the solution for this
+
+
+
+-------------------------------
+Google Cloud Run
+
+- you already know this, in work.
+
+
+
+
+

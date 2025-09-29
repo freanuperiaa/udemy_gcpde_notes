@@ -1,0 +1,39 @@
+
+##########################
+Google Block Storage
+
+
+Block Storage - hard disk storage
+could either be direct attached (physical) or network attached
+
+Direct Attached - Local SSD
+    - physically attached to VM
+    - very high performance
+    - cannot reattach to other VM
+    - Lower availability
+    - temporary/ephemeral storage
+    - no snapshot
+
+Network attached storage
+    - persistent disk
+    - zonal, regional
+    - can be reattached
+    - with snapshot
+
+
+
+
+##########################
+Google FileStore
+
+- Network Attached Storage (NAS) for compute engine and GKE
+- minimum 1TB
+- costly compared to GCS
+
+AI Overview
+Cloud Storage in Google Cloud Platform (GCP) - GeeksforGeeks
+GCP Filestore is a high-performance, managed file system for shared access by multiple applications and
+ virtual machines simultaneously, using a familiar file-based access model like NFS. 
+In contrast, Google Cloud Storage (GCS) is an object store designed for massive, unstructured data
+like images, videos, and archives, offering high scalability but not supporting direct file system
+operations or shared file access in the same way

@@ -1,0 +1,198 @@
+Session 6
+
+##########################
+Google Cloud Storage
+
+- object storage solution in GCP
+
+
+##########################
+Storage Location
+
+Region, Dual Region, Multi-Region
+
+Region:
+    - lowest latency
+    - replicated data across multiple zones in region
+
+Dual Region
+    - high availabilty, low latency across 2 regions
+    - only select pair of regions
+
+Multi-region
+    - highest availability across continents
+
+
+##########################
+Storage Class
+
+- will depend on how frequent you access data
+- will depend on amount of data
+
+classes are:
+Standard, Near line, Cold line, Archive
+
+
+
+Standard
+    - hot data, high frequency access
+    - costliest
+    - access cost is low
+
+Near line
+    - Low frequency access, once in 30 days
+    - storage is cheaper than standard
+    - access cost will increase compared than Standard
+    - likely used for backup purposes
+
+Cold line
+    - very low frequency
+    - storage is cheaper than nearline, access is more than nearline
+
+Archive
+    - offline data
+    - complete backup only
+    - data access is once a year
+    - storage is cheapest, access is very high
+
+
+##########################
+Object Lifecycle Management
+
+- what action needs to be performed on an object, based on a condition
+
+conditions:
+    - object age
+    - file type
+    - after a specific date
+
+actions:
+    - transition to different storage class
+    - from coldline, delete
+
+
+##########################
+Securing Data with Encryption
+
+- Google managed Encryption Keys
+    - fully managed
+
+- Customer managed Encyrption Keys
+    - create a keyring in Cloud KMS (Key Management Service)
+    - customer will manage keys
+
+- Customer supplied Encryption Keys 
+    - generate key with: openssl rand =base64 32
+    - gsutil - encrypt with CSEK
+
+- 
+
+
+##########################
+Object Versioning
+
+- prevents accidental deletion. needs to be enabled/disabled
+- access versions of file with (object key + version number)
+- older, noncurrent versions of files in a bucket incur storage costs
+    - so better to delete if not needed 
+- if Object Versioning is enabled on your GCS bucket, overwriting a file will create a new version of that file. (just like in work, when we upload script with same name.)
+
+
+
+##########################
+Cloud Storage Access Control
+
+- Who can do what on GCS at what level
+    - level - project, bucket, object
+
+
+applying access at Bucket Level
+    - uniform level access (all objects inside bucket have same access)
+    - fine grained permission (create Access Control List (ACL) for each object)
+
+applying at project level:
+    - Use IAM. set role such as Storage Admin, Storage Object Admin, etc
+
+applying at Bucket Level Role
+    - select a bucket and assign role
+    - 
+
+
+
+
+
+##########################
+Signed URL - Temporary Access
+
+- we can use gsutil command to generate a temporary URL to an object in your bucket
+
+
+
+
+
+##########################
+Bucket Retention Policy
+
+- "minimum duration for which bucket will be protected from"
+- ensures objects within a bucket cannot be deleted or overwritten until they reach a defined age, 
+helping with compliance, data protection, and security by preserving data for a specific period.
+
+
+
+
+##########################
+GCS Pricing
+
+points for which you will be billed:
+
+
+Storage Pricing - amount of data youre storing
+
+Data Access Procing - how often you access the data you stored
+
+
+^ all this will have particular multipliers depending on what class your bucket is
+(Standard, Near line, Cold line, Archive)
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!
+!!!    Section 7 
+!!!!!!!!!!!!!!!!!!!!!!!!
+
+gsutil - old, not recommended
+gcloud storage - new
+
+
+gsutil cp <gs://source> <gs://destination>
+gcloud storage cp <gs://source> <gs://destination>
+
+to check commands for GCS in gcloud CLI, just run:
+
+`gcloud storage`
+
+
+
+
+##########################
+GCS Bucket Class - Autoclass
+
+- when creating bucket, we can set class standard, nearline, etc
+    - there is a new option called "Autoclass"
+    - Automatically transitions each object to Standard or Nearline class based on object-level activity, to optimize for cost and latency. Recommended if usage frequency may be unpredictable. Can be changed to a default class at any time
+
+
+
+##########################
+GCS Security
+
+- Uniform Bucket Level Access - Recommended
+- ACLs - old
+
+
+
+
+##########################
+GCS Object Versioning V2
+
+

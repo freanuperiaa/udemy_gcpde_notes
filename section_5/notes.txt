@@ -1,0 +1,31 @@
+
+
+Session 5
+
+GCP Storage Products
+
+
+Structured
+    - Transactional
+        .- Cloud SQL
+        .- Cloud Spanner
+
+    - Analytical
+        .- BigQuery
+        .-
+
+Semi-Structured
+    - Big Table (row-key)
+
+    - DataStore/FireStore
+
+Unstructured
+    - Cloud Storage
+    - Block Storage
+        - persistent disk
+        - local SSD
+    
+    - In-Memory DB
+        - Memory Store
+            - Redis
+            - Memcache

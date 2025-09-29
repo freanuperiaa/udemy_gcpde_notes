@@ -1,0 +1,48 @@
+##################################
+Section 10 - Database Concepts
+
+OLTP vs OLAP
+    - tl;dr - transactional vs analytical
+
+GCP Services for OLTP:
+    - Cloud SQL
+    - Cloud Spanner
+
+GCP Services for OLAP:
+    - BigQuery
+
+
+Vertical - Horizontal Scaling
+    - vertical - go tall, set higher resources (RAM, vCPU, etc)
+    - horizontal - go wide, more VMs
+
+
+RTO & RPO
+    - disaster recovery (DR) terms
+    - Recovery Time Objective & Recovery Point Objective
+    - RPO - from what point we go back to when we recover data (based on video)
+          - maximum time for which an organization can tolerate data loss
+
+    - RTO - how long it takes for our system to go back (based on video)
+          - maximum time for which our system can be down
+
+
+Availability & Durability
+    - Durability: how healthy and resilient your data is
+    - Availability: how much amount of time data is up/available to access
+
+
+
+##################################
+Section 11 - GCP Database Products
+
+Structured Data
+    - Cloud SQL
+    - Cloud Spanner
+    - BigQuery
+
+
+Semi-Structured Data
+    - BigTable
+    - DataStore
+    - Memory Store

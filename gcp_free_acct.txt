@@ -1,0 +1,15 @@
+created new account!
+
+2025-09-25 02:38 AM.
+
+email: magnussonfrancis@gmail.com
+pw: oauth/signin with google.
+
+expiry: 3 months.
+
+
+link:
+https://console.cloud.google.com/welcome/new?project=project-90da2173-e2b0-47e3-8ac&hl=en
+
+
+
