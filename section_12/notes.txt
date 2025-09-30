@@ -1,0 +1,13 @@
+##################################
+Section 12 - Google Cloud SQL
+
+- Fully Managed RDBMS for mysql, postgres, sqlserver
+- lift & shift above database
+- OLTP
+
+
+nothing much here about concepts, all about hands-on demo
+we've tried Cloud SQL itself, it shld be good. perhaps we can do
+some small projects using Cloud SQL
+
+
