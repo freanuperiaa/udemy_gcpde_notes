@@ -1,0 +1,39 @@
+##################################
+Section 12 - Google Cloud Spanner
+
+
+- distributed and scalable RDBMS solution in GCP
+- unlike Google Cloud SQL, Cloud Spanner *can go wide/horizontal*
+- used for mission-critical applications
+- costlier than Cloud SQL, only recommended when Data Volume > 2 TB
+
+- Cloud Spanner has horizontal read/write replicas across region
+    - Cloud SQL has only horizontal read replicas
+
+
+
+*- in the hands on demo, when we created a table, we specified to link
+    it to another table by the `INTERLEAVE IN PARENT` table which 
+    instructs Spanner to couple these tables together in a zone so that
+    retrieving data is easier
+
+    *- Interleaved tables in Spanner are child tables whose rows are physically stored
+       with their associated parent row, optimizing performance for common parent-child 
+       relationships. This physical co-location significantly speeds up queries and joins
+       involving the parent and child tables because the data resides on the same storage nodes, 
+       reducing network overhead and simplifying data retrieval. 
+
+
+
+
+Which database to use When
+
+- Cloud SQL
+    - good for lift & shift (quick migrate) based system
+    - bestfor CRM, ecommerce app
+    - max data size is 30 TB
+
+- Cloud Spanner
+    - horizontal scalability
+    - low latency
+    - high scalability and replication

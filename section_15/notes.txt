@@ -1,0 +1,62 @@
+##########################################
+Section 14 - NoSQL, semi-structured data
+
+
+
+NoSQL
+- not SQL
+- flexible schema
+- variable number of property
+- Data model will be like
+    - document
+    - key-value pair
+    - graph-based
+
+    something like: 
+    {
+        'id': 100,
+        'fn': 'Freanu',
+        'ln': 'Peria'
+    },
+    {
+        'id': 101,
+        'fn': 'Lex',
+        'ln': 'Luthor',
+        'money': 99999999
+    }
+
+    - you can think of JSON
+
+
+Gemini Says:
+No, JSON itself is not a NoSQL database; rather, it is a data format that
+is commonly used by NoSQL databases (also includes key-value pairs and documents). 
+
+NoSQL is a broad category of non-relational databases, 
+and JSON databases are a specific type of NoSQL database designed 
+to store and query data in JSON format. 
+
+Semi-Structured Data Solutions in GCP
+
+BigTable
+
+DataStore
+
+FireStore
+
+
+
+##########################################
+Section 15 - DataStore & FireStore
+
+DataStore
+
+
+
+
+
+
+
+
+
+
