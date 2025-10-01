@@ -2,7 +2,6 @@
 Section 14 - NoSQL, semi-structured data
 
 
-
 NoSQL
 - not SQL
 - flexible schema
@@ -45,18 +44,58 @@ DataStore
 FireStore
 
 
-
 ##########################################
 Section 15 - DataStore & FireStore
 
 DataStore
 
+- serverless and highly scalable NoSQL Database
+- tight coupling with App Engine (+ DataStore)
+- can use SQL-like query (GQL)
+- ACID Transaction
+- data replication across different region
 
 
+*- on the demo, we can see that gcp somewhat mixes Datastore and Firestore.
+    - author also says that if you already picked datastore for your Google App Engine,
+        Datastore will be default for your project and you wont be able to use Firestore
 
+*- differences: read more at https://cloud.google.com/datastore/docs/firestore-or-datastore
 
+Firestore
 
+- next generation of Datastore
+- collection & document model
+- modes:
+    - native mode
+    - datastore mode
 
+*- ChatGPT says...
+
+🔹 Google Cloud Datastore (legacy)
+
+NoSQL document database originally offered by Google App Engine.
+Stored data as entities with key–value properties.
+Strong consistency only for some operations (others were eventually consistent).
+Limited querying and indexing compared to newer databases.
+Now deprecated — automatically upgraded to Firestore in Datastore mode.
+
+🔹 Google Cloud Firestore
+
+The successor to Datastore (NoSQL document DB).
+Two modes:
+Native mode → for mobile/web apps (tight integration with Firebase SDK).
+Datastore mode → backward-compatible for apps built on Cloud Datastore.
+Stores data as documents inside collections (more flexible than Datastore entities).
+Stronger ACID transactions across multiple documents and collections.
+Real-time sync for apps (if using Native mode).
+Richer querying, indexing, and scalability compared to Datastore.
+
+✅ In short:
+
+Datastore = legacy document DB.
+Firestore = the new generation (better queries, transactions, scalability, and Firebase integration).
+If you’re starting fresh → always use Firestore (Native mode) unless you specifically need Datastore compatibility.
 
 
 
