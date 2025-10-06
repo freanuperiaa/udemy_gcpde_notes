@@ -1,0 +1,42 @@
+##########################################
+Section 17 - Cloud BigQuery
+
+- Database Warehouse Solution
+- Columnar Storage
+- for Analytical Database
+
+
+BigQuery Data Organization
+
+project -> dataset -> table
+
+you can assign role at the organization, project, or dataset level
+
+
+BigQuery also jobs (some which we are discussing here in Section 19 for the Data Processing part of the course)
+- Load
+- Query (we usually do this at work)
+- Extract
+- Copy
+
+
+When to use BigQuery?
+- when workload is analytical
+- when Data doesn't change in database, as bigquery uses built-in cache
+- for complex queries
+- when query takes more execution time
+- off-load some workload from primary transaction DB
+- when your data is denormalized
+
+
+!!!!!!!!!!!!!!!!!!!!
+!!! TIL moment(s)
+!!!!!!!!!!!!!!!!!!!!
+
+- when you run a query, you can see more info in "Job Information" tab
+    - in it, you can see a destination table which stores the query results (if applicable)
+      and it has a 24h validity (gets deleted) - so you can use it when doing investigation!!!
+      no need to rerun complex queries, just go and see the result in the temp table
+- 
+
+
