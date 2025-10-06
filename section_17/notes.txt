@@ -1,6 +1,16 @@
 ##########################################
 Section 17 - Cloud Bigtable
 
+- Wide column NoSQL Database
+- column-oriented database, data stored at column-wise
+- 
+
+column family - Bigtable's way of grouping columns
+              - refers to the set of columns that are related to one another and/or 
+              typically used together. These grouping of columns in Bigtable helps organize the
+              data and limit what you’re pulling back.
+
+
 
 
 
