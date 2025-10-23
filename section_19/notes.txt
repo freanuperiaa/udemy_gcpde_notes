@@ -1,5 +1,5 @@
 ##########################################
-Section 17 - Cloud BigQuery
+Section 19 - Cloud BigQuery
 
 - Database Warehouse Solution
 - Columnar Storage

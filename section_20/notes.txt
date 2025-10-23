@@ -1,0 +1,56 @@
+##########################################
+Section 20 - Google Cloud PubSub
+
+
+* Gemini answered *
+Yes, Google Cloud Pub/Sub is often compared to Apache Kafka because both are distributed messaging systems for
+asynchronous communication, but Pub/Sub is a fully managed, serverless publish/subscribe service within the
+Google Cloud ecosystem. Kafka is a distributed streaming log with a partition-centric model requiring more user
+management, while Pub/Sub offers dynamic sharding and automatic replication for resilience, making it more
+suitable for a managed cloud environment. 
+
+PubSub - fully-managed asynchronous messaging service
+
+publisher - app sends message to topic
+
+push & pull way to access messages
+pull - subscriber pulls messages
+push - publisher pushes message / message sent to subscriber via webhook
+
+
+one topic can have multiple subscriber
+one subscriber can have multiple topic
+
+
+** yeah just like the pubsub you have learned on other tuts **
+** but this one, we created them on gcp, manually published a message into topic and pulled it from a subscription **
+
+
+Delivery Types:
+    - Push
+    - Write to Cloud Storage
+    - Write to BigQuery
+
+
+so upon doing hands-on, looks like retrieving of messages are only allowed with
+subscriptions which have delivery type = pull
+    - whatever is published, it gets pushed directly by the subscription to the endpoint specified
+
+
+
+Dead Lettering in GCP Pub/Sub
+    - A mechanism for handling messages that cannot be successfully processed by subscribers
+    - When a subscriber repeatedly fails to acknowledge a message (after maximum delivery attempts), 
+    the subscription automatically moves the message to a dedicated dead letter topic
+    - This prevents problematic messages from blocking the main subscription and allows for separate analysis of failed messages
+
+
+** PubSub Lite **
+
+- Partition-based messaging service
+- Not Global, only zonal or regional
+- 
+
+
+on GCP Console, it says:
+Pub/Sub Lite is being deprecated. Effective March 18, 2026, Pub/Sub Lite will be turned down. If you have not used Pub/Sub Lite within 90 days preceding July 15, 2025, your access will be removed on July 15, 2025. You can migrate your Pub/Sub Lite service to Managed Service for Apache Kafka  or Pub/Sub  . Please email pubsub-lite-help@google.com if you have any questions.
