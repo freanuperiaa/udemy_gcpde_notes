@@ -1,0 +1,24 @@
+##########################################
+Section 21 - Cloud Dataflow
+
+
+- Managed data-processing service
+- GCP's version of Apache Beam
+- has its own unified programming model for implementing batch/streaming processing jobs
+
+
+Apache Beam:
+    - Pipeline: a graph of transformations/data processing steps
+        Data Sources (Inputs): Where the data originates from, such as files, databases, or streaming sources like Apache Kafka.
+        Transformations (Processing Logic): The operations applied to the data, which can include filtering, mapping, grouping, counting, or more complex custom logic defined by the user. These transformations are represented by PTransforms.
+        Data Sinks (Outputs): Where the processed data is written to, which can be the same type as the input source or a different type, allowing for data format conversions.
+
+    - IO-Transform:  a special type of transform that reads data from an external source or writes data to an external sink, like a file or database.
+
+    - Pcollection: (short for Parallel Collection) is the fundamental data structure that represents a potentially distributed, multi-element dataset within a pipeline. It serves as the container for data as it flows through the various processing steps (PTransforms) of a Beam pipeline.
+
+    - PTransform - The Operations executed within a pipeline
+
+
+
+

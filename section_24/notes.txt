@@ -1,0 +1,11 @@
+##########################################
+Section 24 - Cloud Data Fusion
+
+managed solution for building data pipelines
+a drag and drop tool
+
+
+
+
+
+
