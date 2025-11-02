@@ -1,0 +1,23 @@
+##########################################
+Section 26 - Data Loss Prevention API
+
+- managed service to help discover, classify, and protect sensitive data
+- PII data - personally identifiable information
+- can be applied on Cloud Storage and BigQuery
+- will work on free form text, structured, and unstructured data
+
+what DLP does with data:
+- identify sensitive data and deidentify (mask, encrypt, etc)
+- re-identify (in case we need the data back)
+
+
+Deidentification of data:
+    - redaction - remove sensitive data
+    - replacement - replace with some tokens (like info_type)
+    - masking - replace one/more character with some other character    
+        - myemail@gmail.lcom -> my****l@*****.com
+    - encrypt - scrambling data into an unreadable format
+
+
+
+
