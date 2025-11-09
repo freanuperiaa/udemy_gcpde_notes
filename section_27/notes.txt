@@ -1,5 +1,22 @@
 ##########################################
 Section 27 - Data Catalog
 
+- fully managed and highly scalable data discovery and metadata management service
+- single place to discover all data, asset across all GCP projects
+
+- with Data Catalog, you can search for data assets and tag data
+
+
+Metadata
+- technical metadata
+    - resides inside individual products (i.e. BigQuery, Pub/Sub)
+    - metadata being registered by catalog automatically
+
+- business metadata
+    - attach tag to existing data asset
+    - define some tag template and attach
+
+
+
 
 
